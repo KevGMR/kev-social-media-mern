@@ -1,0 +1,29 @@
+{
+  "name": "kev-social-media-mern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevGMR/kev-social-media-mern.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevGMR/kev-social-media-mern/issues"
+  },
+  "homepage": "https://github.com/KevGMR/kev-social-media-mern#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "helmet": "^5.1.0",
+    "mongoose": "^6.4.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.18"
+  }
+}
