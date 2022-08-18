@@ -4,7 +4,7 @@ import { Users } from '../../dummyData'
 import { useState } from 'react'
 
 function Post({ post }) {
-    const user = Users.filter(u => u.id === post.userId)
+    // const user = Users.filter(u => u.id === post.userId)
     const [like, setLike] = useState(post.like)
     const [isLiked, setIsLiked] = useState(false)
     const PF =  process.env.REACT_APP_PUBLIC_FOLDER
