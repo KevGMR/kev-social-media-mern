@@ -17,7 +17,7 @@ function Feed({ username }) {
 
   useEffect(() => {
     fetchPosts();
-  }, [username, posts]);
+  }, [username]);
 
   return (
     <div className="feed">
