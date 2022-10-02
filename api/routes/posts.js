@@ -5,9 +5,11 @@ const User = require("../models/User");
 //create a post
 
 router.post("/", async (req, res) => {
+  // console.log("in here");
   const newPost = new Post(req.body);
   try {
     const savedPost = await newPost.save();
+    console.log(savedPost);
     res.status(200).json(savedPost);
   } catch (err) {
     res.status(500).json(err);

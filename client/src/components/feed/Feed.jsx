@@ -15,11 +15,12 @@ function Feed({ username }) {
 
   useEffect(() => {
       const fetchPosts = async () => {
-        const res = username
+        const response = username
           ? await axios.get(`/posts/profile/${username}`)
           : await axios.get(`posts/timeline/${user._id}`);
+        console.log(response)
         setPosts(
-          res.data.sort((p1, p2) => {
+          response.data.sort((p1, p2) => {
             return new Date(p2.createdAt) - new Date(p1.createdAt);
           })
         );
