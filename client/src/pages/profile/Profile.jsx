@@ -16,7 +16,9 @@ function Profile({ profile }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?username=${username}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URI}/users?username=${username}`
+      );
       setUser(res.data);
     };
     fetchUser();

@@ -21,7 +21,9 @@ function Post({ post }) {
 
   useEffect(() => {
     const fetchUser = async () => {
-      const res = await axios.get(`/users?userId=${post.userId}`);
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URI}/users?userId=${post.userId}`
+      );
       setUser(res.data);
     };
     fetchUser();
@@ -29,7 +31,9 @@ function Post({ post }) {
 
   const likeHandler = () => {
     try {
-      axios.put(`/posts/${post._id}/like`, { userId: currentUser._id });
+      axios.put(`${process.env.REACT_APP_API_URI}/posts/${post._id}/like`, {
+        userId: currentUser._id,
+      });
     } catch (err) {}
     setLike(isLiked ? like - 1 : like + 1);
     setIsLiked(!isLiked);

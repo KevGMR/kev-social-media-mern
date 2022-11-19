@@ -25,14 +25,14 @@ function Share() {
       newPost.img = fileName;
       try {
         // console.log(newPost);
-        await axios.post("upload", data);
+        await axios.post(`${process.env.REACT_APP_API_URI}/upload`, data);
       } catch (err) {
         console.log(err);
       }
     }
 
     try {
-      await axios.post("/posts", newPost);
+      await axios.post(`${process.env.REACT_APP_API_URI}/posts`, newPost);
       window.location.reload()
     } catch (err) {
       console.log(err);

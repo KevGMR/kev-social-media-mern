@@ -9,8 +9,10 @@ const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
 const multer = require("multer");
 const path = require("path");
+const cors = require("cors")
 
 dotenv.config();
+
 
 mongoose.connect(
   process.env.MONGO_URL,
@@ -20,6 +22,7 @@ mongoose.connect(
   }
 );
 
+app.use(cors())
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 //middleware

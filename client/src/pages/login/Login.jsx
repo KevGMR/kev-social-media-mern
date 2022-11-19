@@ -7,10 +7,11 @@ import { AuthContext } from "../../context/AuthContext";
 import { CircularProgress } from "@mui/material";
 
 function Login() {
+  // console.log(process.env.REACT_APP_PUBLIC_FOLDER);
   const email = useRef();
   const password = useRef();
 
-  const {isFetching, dispatch } = useContext(AuthContext);
+  const { isFetching, dispatch } = useContext(AuthContext);
 
   const handleClick = (e) => {
     e.preventDefault();
